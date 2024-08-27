@@ -1,0 +1,31 @@
+# OS-specific files
+.DS_Store
+
+# Node.js dependencies and lock files
+node_modules/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Log files and local files
+*.log
+*.local
+
+# Compiled files and build directories
+build/
+types/
+*.js
+!template-*/*.js
+!template-*/**/*.js
+
+# IDE settings
+.idea/
+
+# Files to track explicitly
+!.gitignore
+!.editorconfig
+!.vscode/
+!template-*/src/*.js
+
+# Build directories
+template-*/package/

@@ -1,0 +1,61 @@
+
+#yt-sub-ext-container {
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark text color for better readability */
+    border: 2px solid #f00; /* Reddish border */
+    border-radius: 0;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition effect */
+}
+
+/* Hover effect */
+#yt-sub-ext-container:hover {
+    background-color: rgba(255, 0, 0, 0.05); /* Light reddish background on hover */
+    border-color: #d32f2f; /* Darker reddish border on hover */
+    border-radius: 8px;
+    transition: border-radius 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Button styling */
+.btn {
+    background: linear-gradient(to bottom, #f05a28, #f0665e, #d13d78); /* Gradient with a range of complementary reddish-pink shades */
+    color: #ffffff; /* White text color */
+    padding: 12px 24px; /* Slightly increased padding for a more substantial button */
+    border: none; /* Remove default border */
+    border-radius: 6px; /* Slightly larger border-radius for a softer look */
+    font-size: 16px; /* Consistent font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transition for background and slight scaling effect */
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #d13d78, #f0665e, #f05a28); /* Reverse gradient for hover effect */
+    transform: scale(1.01); /* Slightly scale up the button on hover for a subtle effect */
+}
+
+.btn:active {
+    background: linear-gradient(to bottom, #b03b56, #d25a7a, #d84542); /* Even darker gradient on click */
+    transform: scale(0.98); /* Slightly scale down the button on click for a pressed effect */
+}
+
+
+/* Icon styling */
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 16px; /* Size of the icon */
+    margin-right: 8px; /* Space between icon and text */
+
+}
+
+#yt-sub-ext-container select{
+    height: 34px;
+}
+#yt-sub-ext-msg{
+    display: none;
+    margin-top: 10px;
+}
