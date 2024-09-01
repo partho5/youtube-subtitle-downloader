@@ -1,16 +1,23 @@
 {
-  "name": "chrome-extension-react-ts",
-  "displayName": "React.ts Chrome Extension",
-  "version": "0.0.0",
-  "author": "",
-  "description": "",
+  "name": "youtube-subtitle-downloader-chrome-extension",
+  "displayName": "Youtube Subtitle Downloader",
+  "version": "1.0",
+  "author": "Partho Protim",
+  "description": "A Chrome extension designed to extract YouTube subtitle/closed caption, by just 1 click",
   "type": "module",
   "license": "MIT",
   "keywords": [
     "chrome-extension",
-    "react",
-    "vite",
-    "create-chrome-ext"
+    "youtube",
+    "get-youtube-subtitle",
+    "get-youtube-transcript",
+    "youtube-subtitle",
+    "youtube-subtitle-downloader",
+    "youtube-subtitle-downloader-online",
+    "youtube-transcript",
+    "youtube-transcript-downloader",
+    "youtube-transcript-extractor",
+    "youtube-transcript-extractor-online",
   ],
   "engines": {
     "node": ">=14.18.0"
