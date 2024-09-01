@@ -1,5 +1,5 @@
 import {getSelectedOutputFormat} from "../utils/download/DownloadUtils";
-import {outputFormatSelectId} from "../data/values";
+import {defaultSelectedOutputFormat, outputFormatSelectId} from "../data/values";
 
 // Function to save the selected format to Chrome storage
 const saveSelectedOutputFormat = (format: string): void => {
@@ -11,7 +11,7 @@ const saveSelectedOutputFormat = (format: string): void => {
 // Function to retrieve the saved output format from Chrome storage
 const getSelectedOutputFormatFromStorage = (callback: (format: string) => void): void => {
     chrome.storage.sync.get(['selectedOutputFormat'], (result) => {
-        const format = result.selectedOutputFormat || ''; // Default to empty string if not set
+        const format = result.selectedOutputFormat || defaultSelectedOutputFormat;
         callback(format);
     });
 }
@@ -32,7 +32,7 @@ function setSelectedOption(selectId: string, value: string): void {
 }
 
 // Function to initialize the select element with the saved output format
-function initializeSelectElement(selectId: string): void {
+function initializeDownloadFormatSelected(selectId: string): void {
     getSelectedOutputFormatFromStorage((format) => {
         setSelectedOption(selectId, format);
     });
@@ -41,5 +41,5 @@ function initializeSelectElement(selectId: string): void {
 export {
     handleOutputValChange,
     getSelectedOutputFormatFromStorage,
-    initializeSelectElement
+    initializeDownloadFormatSelected
 };

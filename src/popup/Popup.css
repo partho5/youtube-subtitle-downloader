@@ -14,6 +14,7 @@ h2 {
   color: #fb0972;
   font-weight: 500;
   line-height: 1.2rem;
+  font-size: 2rem;
   margin: 1rem auto;
 }
 
@@ -33,4 +34,12 @@ h2 {
 }
 .settings-label:hover{
   color: #eb00eb;
+}
+
+.msg1{
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.msg1 a#how-link{
+  font-size: 1rem !important;
 }

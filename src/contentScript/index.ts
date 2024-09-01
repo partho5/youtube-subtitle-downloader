@@ -1,6 +1,7 @@
 import { handleDownloadClick } from "../utils/download/DownloadUtils";
 import {displayMsgId, extensionUniquePrefix, outputFormatSelectId} from "../data/values";
-import {getSelectedOutputFormatFromStorage, handleOutputValChange, initializeSelectElement} from "./ChangeHandler";
+import {getSelectedOutputFormatFromStorage, handleOutputValChange, initializeDownloadFormatSelected} from "./ChangeHandler";
+import {extractVideoUrlsFromPlaylist} from "../utils/youtube/Extract";
 
 function injectUI() {
     // Check if the target element exists and hasn't already been modified
@@ -35,7 +36,7 @@ function injectUI() {
             secondaryInner.parentNode.insertBefore(newDiv, secondaryInner);
         }
 
-        initializeSelectElement(`#${outputFormatSelectId}`);
+        initializeDownloadFormatSelected(`#${outputFormatSelectId}`);
 
         const button = newDiv.querySelector('.btn-download');
         if (button) {
@@ -63,6 +64,13 @@ const intervalId = setInterval(() => {
             for (const mutation of mutationsList) {
                 if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
                     injectUI();
+
+                    const urls = extractVideoUrlsFromPlaylist();
+                    if(urls.length > 0){
+                        console.log(`${urls.length} videos in this playlist`);
+                    }
+
+                    // now the UI is appearing in the webpage
                     break; // Exit loop after the first modification
                 }
             }

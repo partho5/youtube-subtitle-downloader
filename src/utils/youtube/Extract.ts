@@ -68,9 +68,29 @@ function getVideoTitle(): string | null {
 }
 
 
+function extractVideoUrlsFromPlaylist(): string[] {
+    const videoUrls: string[] = [];
+
+    // Select all video elements in the playlist
+    const videoElements = document.querySelectorAll('ytd-playlist-panel-video-renderer a#wc-endpoint');
+
+    // Loop through the selected elements and extract the href attribute
+    videoElements.forEach(videoElement => {
+        const url = videoElement.getAttribute('href');
+        if (url) {
+            videoUrls.push(`https://www.youtube.com${url}`);
+        }
+    });
+
+    return videoUrls;
+}
+
+
+
 export {
     clickElementWithText,
     getTranscriptData,
     hideTranscriptSection,
-    getVideoTitle
+    getVideoTitle,
+    extractVideoUrlsFromPlaylist
 };

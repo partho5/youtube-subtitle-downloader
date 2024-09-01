@@ -1,12 +1,25 @@
-# YouTube Transcript Downloader Extension
+# YouTube Transcript Extractor - Chrome Extension
 
-A Chrome extension designed to enhance your YouTube experience by providing and managing transcripts for videos.
+A Chrome extension designed to extract YouTube subtitle/closed caption. This tool offers seamless access to video transcripts, empowering you to download and manage them effortlessly.
 
 ## Features
 
-- **Download Transcripts**: Easily download transcripts in various formats including text, JSON, SRT. More will be added.
-- **Custom Styling**: Modify YouTube's UI with custom styles and themes to improve the viewing experience.
-- **Language**: Extract all language transcripts provided by youtube.
+- **Download YouTube Transcripts**: Seamlessly download transcripts from YouTube videos in multiple formats, including plain text, JSON, and SRT. Future updates will introduce even more formats.
+
+
+- **One-Click Functionality**: Experience the ease of downloading transcripts with just a single click—no complicated steps involved.
+ 
+
+- **Custom YouTube UI Styling**: Enhance your YouTube viewing experience with custom styles, making the interface more intuitive and visually appealing.
+
+
+- **Multi-Language Support**: Automatically extract and download transcripts in all available languages provided by YouTube, catering to a global audience.
+
+
+- **Built-In YouTube Integration**: Perform all actions directly within YouTube’s interface, eliminating the need to visit external websites.
+
+
+- **Ad-Free Experience**: Enjoy an uninterrupted, ad-free experience while using the extension, designed by a user who understands the importance of focus.
 
 ## Installation
 

@@ -1,31 +1,120 @@
-@media (prefers-color-scheme: light) {
-  a:hover {
-    color: #61dafb;
-  }
+:root{
+  --colorRed: #ff0055
 }
 
 body {
-  min-width: 20rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 main {
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  border-radius: 12px; /* More rounded corners */
+  padding: 2rem;
   text-align: center;
-  padding: 1em;
-  margin: 0 auto;
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+main:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Shadow on hover */
 }
 
 h3 {
-  color: #61dafb;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 200;
-  line-height: 1.2rem;
-  margin: 2rem auto;
+  font-size: 2rem;
+  color: var(--colorRed);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+h3 span{
+  border-bottom: 3px solid #999;
+  padding: 0 1rem 0.5rem 1rem;
 }
 
-a {
-  font-size: 0.5rem;
-  margin: 0.5rem;
-  color: #cccccc;
+.download-info {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+}
+.download-info .row{
+  display: flex;
+  align-items: center;
+}
+
+.download-info .down-count {
+  margin-left: 10px;
+  color: var(--colorRed);
+  font-size: 2rem;
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.download-info .down-count:hover {
+  transform: scale(1.1); /* Scale effect on hover */
+}
+
+.source-code a {
+  color: #0241fe;
   text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.source-code a:hover {
+  color: var(--colorRed);
+  text-decoration: underline;
+}
+
+.naming-convention {
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: var(--colorRed);
+}
+
+
+/*
+---------------------------------------------
+                  DARK MODE
+---------------------------------------------
+*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ccc;
+  }
+
+  main {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .download-info .down-count {
+    color: #bb86fc;
+  }
+
+  .source-code a {
+    color: #bb86fc;
+  }
 }
