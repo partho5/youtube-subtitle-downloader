@@ -72,9 +72,12 @@ const intervalId = setInterval(() => {
         const observer = new MutationObserver((mutationsList) => {
             for (const mutation of mutationsList) {
                 if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                    // page has been loaded
                     injectUI();
                     setMsg(''); // clears in case any previous message was shown
 
+
+                    // feature to be built
                     const urls = extractVideoUrlsFromPlaylist();
                     if(urls.length > 0){
                         // console.log(`${urls.length} videos in this playlist`);
