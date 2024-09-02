@@ -61,6 +61,24 @@ const convertJsonStrToSRT = (jsonString: string): string => {
     }
 };
 
+const jsonToArray = (transcriptData: string): TranscriptSegment[] | null => {
+    try {
+        const parsedData = JSON.parse(transcriptData);
+
+        // Check if the parsed data is an array
+        if (Array.isArray(parsedData)) {
+            return parsedData as TranscriptSegment[];
+        } else {
+            console.error('Parsed data is not an array.');
+            return null; // Return null if the parsed data is not an array
+        }
+    } catch (error) {
+        console.error('Error parsing JSON data:', error);
+        return null; // Return null on error
+    }
+};
+
 export {
-    convertJsonStrToSRT
+    convertJsonStrToSRT,
+    jsonToArray
 };

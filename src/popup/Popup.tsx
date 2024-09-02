@@ -1,15 +1,8 @@
 import './Popup.css'
-import {appName} from "../data/values";
 import settingsIcon from '../../public/icons/settings-icon.png';
+import {openSettingsPage} from "../utils/ui/Actions";
 
 export const Popup = () => {
-
-    const openSettingsPage = () => {
-        chrome.runtime.openOptionsPage();
-    };
-
-
-
 
   return (
     <main>
@@ -28,6 +21,7 @@ export const Popup = () => {
       </div>
     </main>
   )
+
 }
 
 export default Popup

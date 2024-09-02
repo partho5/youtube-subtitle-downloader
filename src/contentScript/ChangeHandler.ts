@@ -1,4 +1,4 @@
-import {getSelectedOutputFormat} from "../utils/download/DownloadUtils";
+import {getSelectedOutputFormat} from "../utils/output/DownloadUtils";
 import {defaultSelectedOutputFormat, outputFormatSelectId} from "../data/values";
 
 // Function to save the selected format to Chrome storage

@@ -7,6 +7,9 @@ A Chrome extension designed to extract YouTube subtitle/closed caption. This too
 - **Download YouTube Transcripts**: Seamlessly download transcripts from YouTube videos in multiple formats, including plain text, JSON, and SRT. Future updates will introduce even more formats.
 
 
+- **Transcript Copy to Clipboard**: Optionally you can get the transcript copied to clipboard after it gets downloaded.
+
+
 - **One-Click Functionality**: Experience the ease of downloading transcripts with just a single click—no complicated steps involved.
  
 

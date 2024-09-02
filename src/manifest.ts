@@ -20,7 +20,6 @@ export default defineManifest({
     default_icon: 'img/logo-48.png',
   },
   options_page: 'options.html',
-  devtools_page: 'devtools.html',
   background: {
     service_worker: 'src/background/index.ts',
     type: 'module',
@@ -32,14 +31,11 @@ export default defineManifest({
       css: ["src/contentScript/content.css"],
     },
   ],
-  side_panel: {
-    default_path: 'sidepanel.html',
-  },
   web_accessible_resources: [
     {
       resources: ['src/contentScript/content.css'],
       matches: [],
     },
   ],
-  permissions: ['storage', 'activeTab'],
+  permissions: ['storage'],
 })

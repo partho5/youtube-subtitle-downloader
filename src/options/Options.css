@@ -19,7 +19,6 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
   border-radius: 12px; /* More rounded corners */
   padding: 2rem;
-  text-align: center;
   transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
 
@@ -31,18 +30,27 @@ h3 {
   font-size: 2rem;
   color: var(--colorRed);
   margin-bottom: 1rem;
-  transition: color 0.3s ease; /* Smooth color transition */
-}
-h3 span{
-  border-bottom: 3px solid #999;
-  padding: 0 1rem 0.5rem 1rem;
+  text-align: center;
 }
 
-.download-info {
-  font-size: 1.2rem;
-  margin: 2rem 0;
+
+/* each row */
+.row{
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
 }
-.download-info .row{
+.row:not(:first-child) {
+  border-top: 1px solid #ccc;
+}
+.row h4{
+  text-align: center;
+}
+.row .hints{
+  color: #aaa;
+}
+
+/* Download info */
+.download-info .stat{
   display: flex;
   align-items: center;
 }
@@ -58,23 +66,25 @@ h3 span{
   transform: scale(1.1); /* Scale effect on hover */
 }
 
-.source-code a {
-  color: #0241fe;
-  text-decoration: none;
-  transition: color 0.3s ease; /* Smooth color transition */
+/* Links */
+.row.links{
+  font-size: 0.9rem;
+}
+.row.links a {
+  color: #4545cc;
 }
 
-.source-code a:hover {
+.row.links a:hover {
   color: var(--colorRed);
   text-decoration: underline;
 }
-
-.naming-convention {
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
-  margin-top: 1rem;
+.developer{
+  text-align: center;
+  font-size: 0.9rem;
+  color: #000;
 }
 
+/* Download file naming convention */
 .radio-group {
   display: flex;
   gap: 1rem;
@@ -90,6 +100,11 @@ h3 span{
 }
 
 .radio-group input[type="radio"] {
+  accent-color: var(--colorRed);
+}
+
+/* Clipboard */
+.clipboard-option input[type="checkbox"] {
   accent-color: var(--colorRed);
 }
 

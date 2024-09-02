@@ -1,7 +1,9 @@
-import { handleDownloadClick } from "../utils/download/DownloadUtils";
-import {displayMsgId, extensionUniquePrefix, outputFormatSelectId} from "../data/values";
-import {getSelectedOutputFormatFromStorage, handleOutputValChange, initializeDownloadFormatSelected} from "./ChangeHandler";
-import {extractVideoUrlsFromPlaylist} from "../utils/youtube/Extract";
+import { handleDownloadClick } from "../utils/output/DownloadUtils";
+import { displayMsgId, extensionUniquePrefix, outputFormatSelectId } from "../data/values";
+import { handleOutputValChange, initializeDownloadFormatSelected } from "./ChangeHandler";
+import { extractVideoUrlsFromPlaylist } from "../utils/youtube/Extract";
+import {setMsg} from "../utils/ui/msgLog";
+
 
 function injectUI() {
     // Check if the target element exists and hasn't already been modified
@@ -13,6 +15,7 @@ function injectUI() {
         const newDiv = document.createElement('div');
         newDiv.id = `${extensionUniquePrefix}-container`;
         newDiv.innerHTML = `
+            <span class="${extensionUniquePrefix}-options-button" title="Settings">⚙️</span>
             <button class='btn btn-download'>
                 <span class='icon'>&#8681;</span>
                 Download Subtitle
@@ -47,9 +50,15 @@ function injectUI() {
         if(outputSelector){
             outputSelector.addEventListener('change', handleOutputValChange);
         }
+
+        const optionsButton = newDiv.querySelector(`.${extensionUniquePrefix}-options-button`);
+        if (optionsButton) {
+            optionsButton.addEventListener('click', ()=>{
+                chrome.runtime.sendMessage({"action": "openOptionsPage"});
+            });
+        }
     }
 }
-
 
 // Use setInterval to keep checking for the element until it appears
 const intervalId = setInterval(() => {
@@ -64,10 +73,11 @@ const intervalId = setInterval(() => {
             for (const mutation of mutationsList) {
                 if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
                     injectUI();
+                    setMsg(''); // clears in case any previous message was shown
 
                     const urls = extractVideoUrlsFromPlaylist();
                     if(urls.length > 0){
-                        console.log(`${urls.length} videos in this playlist`);
+                        // console.log(`${urls.length} videos in this playlist`);
                     }
 
                     // now the UI is appearing in the webpage
