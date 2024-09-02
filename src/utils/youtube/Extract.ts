@@ -1,7 +1,7 @@
 
-/* Function to click an element based on its text content */
 import {TranscriptSegment} from "../interface/TypeInterface";
 
+/* Function to click an element based on its text content */
 function clickElementWithText(text: string): void {
     // Use XPath to find the element with the specified text content
     const xpath: string = `//div[contains(@class, 'yt-spec-button-shape-next__button-text-content')]//span[text()='${text}']`;
