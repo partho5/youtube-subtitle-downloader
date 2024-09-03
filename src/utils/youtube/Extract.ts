@@ -12,12 +12,12 @@ function clickElementWithText(text: string): void {
         const element: Node | null = elements.snapshotItem(0);
         if (element instanceof HTMLElement) {
             element.click();
-            console.log(`Clicked element with text: ${text}`);
+            // console.log(`Clicked element with text: ${text}`);
         } else {
-            console.log(`Snapshot item is not an HTML element.`);
+            // console.log(`Snapshot item is not an HTML element.`);
         }
     } else {
-        console.log(`Element with text '${text}' not found.`);
+        // console.log(`Element with text '${text}' not found.`);
     }
 }
 

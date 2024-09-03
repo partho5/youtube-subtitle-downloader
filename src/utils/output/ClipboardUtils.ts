@@ -22,9 +22,9 @@ const copyToClipBoard = (data: string) => {
 
         try {
             document.execCommand('copy');
-            // console.log('Transcript copied to clipboard');
+            console.log('Transcript copied to clipboard');
         } catch (err) {
-            // console.error('Failed to copy transcript to clipboard:', err);
+            console.error('Failed to copy transcript to clipboard:', err);
         }
         document.body.removeChild(textarea);
     }

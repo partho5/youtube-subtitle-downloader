@@ -57,7 +57,7 @@ export const Options = () => {
         <main>
             <section className="content">
                 <h3>
-                    Youtube Extension Options
+                    Youtube Subtitle Downloader
                 </h3>
 
                 <div className="row download-info">
@@ -124,20 +124,21 @@ export const Options = () => {
                 </div>
 
                 <div className="row links">
+                    <h4>Important Links</h4>
                     <div>
                         <p>
-                            An <a href="https://www.youtube.com/watch?v=IgKWPdJWuBQ" target="_blank">example
+                            🔗 An <a href="https://www.youtube.com/watch?v=IgKWPdJWuBQ" target="_blank">example
                             video</a> that has multi language
                             transcript available
                         </p>
                     </div>
 
                     <p>
-                        See <a href="https://www.youtube.com/watch?v=h9tTK0LbXfE" target="_blank">how the
+                        🔗 See <a href="https://datamatric.com/portfolio/apps/youtube-subtitle-downloader" target="_blank">how the
                         extension works</a>
                     </p>
                     <p className="source-code">
-                        View the <a href="https://github.com/partho5/youtube-subtitle-downloader" target="_blank">source code on GitHub</a>
+                        🔗 Report a <a href="https://github.com/partho5/youtube-subtitle-downloader/issues" target="_blank">issue on GitHub</a>
                     </p>
 
                     <hr/>

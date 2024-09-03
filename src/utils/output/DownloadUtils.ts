@@ -80,7 +80,7 @@ const handleDownloadClick = () => {
                 setMsg("No transcript available for this video 🚫", true);
             } else {
                 // Try clicking the 'Show Transcript' button again
-                console.log('Retrying to click "Show transcript"...');
+                // console.log('Retrying to click "Show transcript"...');
                 clickElementWithText('Show transcript');
             }
         }
@@ -173,7 +173,7 @@ function downloadTranscript(transcriptJSON: string, format: string): Promise<boo
                         document.body.removeChild(link);
                         URL.revokeObjectURL(url);
 
-                        console.log('Transcript downloaded as', fileName);
+                        // console.log('Transcript downloaded as', fileName);
                         resolve(true); // Download succeeded
                     } catch (error) {
                         console.error('Error downloading transcript:', error);
